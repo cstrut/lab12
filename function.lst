@@ -1,0 +1,120 @@
+     1                                 %line 1+1 function.asm
+     2                                 
+     3                                 [section .data]
+     4                                 [extern printMSG]
+     5                                 [extern printEndl]
+     6                                 [extern printReg]
+     7                                 [extern printRAX]
+     8                                 [extern exitNormal]
+     9                                 [extern getRand]
+    10                                 
+    11                                 [extern mulby4]
+    12                                 [extern printXtimes]
+    13                                 [extern getRandNum]
+    14                                 [extern getMax]
+    15                                 [extern getMin]
+    16                                 [extern getAve]
+    17                                 
+    18                                 
+    19                                 [section .text]
+    20                                 
+    21                                 
+    22                                 
+    23                                 
+    24                                 
+    25                                 
+    26                                 
+    27                                 
+    28                                 
+    29                                 
+    30                                 
+    31                                 
+    32                                 
+    33                                 
+    34                                 
+    35                                 
+    36                                 
+    37                                 
+    38                                 
+    39                                 
+    40                                 
+    41                                 
+    42                                 
+    43                                 
+    44                                 
+    45                                 
+    46                                 
+    47                                 
+    48                                 [global _start]
+    49                                 _start:
+    50                                 
+    51                                 
+    52                                 
+    53 00000000 48C7C70D000000          mov rdi, 0xd
+    54 00000007 E8(F6FFFFFF)            call printMSG
+    55                                 
+    56 0000000C 48C7C700000000          mov rdi, 0x0
+    57 00000013 E8(F6FFFFFF)            call printMSG
+    58                                 
+    59                                 
+    60                                 
+    61                                 
+    62                                 
+    63 00000018 48C7C704000000          mov rdi, 0x4
+    64 0000001F E8(F6FFFFFF)            call mulby4
+    65 00000024 E8(F6FFFFFF)            call printRAX
+    66                                 
+    67                                 
+    68 00000029 48C7C710000000          mov rdi, 0x10
+    69 00000030 E8(F6FFFFFF)            call mulby4
+    70 00000035 E8(F6FFFFFF)            call printRAX
+    71                                 
+    72 0000003A E8(F6FFFFFF)            call printEndl
+    73                                 
+    74                                 
+    75                                 
+    76                                 
+    77                                 
+    78 0000003F 48C7C704000000          mov rdi, 0x4
+    79 00000046 48C7C603000000          mov rsi, 0x3
+    80 0000004D E8(F6FFFFFF)            call printXtimes
+    81 00000052 E8(F6FFFFFF)            call printEndl
+    82                                 
+    83                                 
+    84 00000057 48C7C703000000          mov rdi, 0x3
+    85 0000005E 48C7C604000000          mov rsi, 0x4
+    86 00000065 E8(F6FFFFFF)            call printXtimes
+    87 0000006A E8(F6FFFFFF)            call printEndl
+    88                                 
+    89                                 
+    90                                 
+    91                                 
+    92                                 
+    93                                 
+    94                                 
+    95 0000006F 48C7C710000000          mov rdi, 0x10
+    96 00000076 E8(F6FFFFFF)            call getRandNum
+    97 0000007B E8(F6FFFFFF)            call printRAX
+    98                                 
+    99 00000080 48C7C710000000          mov rdi, 0x10
+   100 00000087 E8(F6FFFFFF)            call getRandNum
+   101 0000008C E8(F6FFFFFF)            call printRAX
+   102                                 
+   103 00000091 48C7C710000000          mov rdi, 0x10
+   104 00000098 E8(F6FFFFFF)            call getRandNum
+   105 0000009D E8(F6FFFFFF)            call printRAX
+   106 000000A2 E8(F6FFFFFF)            call printEndl
+   107                                 
+   108                                 
+   109                                 
+   110 000000A7 48C7C700010000          mov rdi, 0x100
+   111 000000AE 48C7C600010000          mov rsi, 0x100
+   112 000000B5 48C7C203010000          mov rdx, 0x103
+   113 000000BC 48C7C100010000          mov rcx, 0x100
+   114 000000C3 49C7C000010000          mov r8, 0x100
+   115 000000CA 49C7C100010000          mov r9, 0x100
+   116 000000D1 E8(F6FFFFFF)            call getMax
+   117 000000D6 E8(F6FFFFFF)            call printRAX
+   118 000000DB E8(F6FFFFFF)            call printEndl
+   119                                 
+   120 000000E0 E8(F6FFFFFF)            call exitNormal
